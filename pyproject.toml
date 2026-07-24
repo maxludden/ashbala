@@ -1,0 +1,29 @@
+[project]
+name = "ashbala"
+version = "0.1.0"
+description = "Download ebooks, audiobooks, and cover art for both before uploading to Storyteller."
+readme = "README.md"
+authors = [
+    { name = "Maxwell Ludden", email = "maxludden@me.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "bs4>=0.0.2",
+    "loguru>=0.7.3",
+    "requests>=2.34.2",
+    "rich>=15.0.0",
+    "rich-gradient>=0.3.13",
+    "typer>=0.27.0",
+]
+
+[project.scripts]
+ashbala = "ashbala.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.11.30,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.0",
+]
