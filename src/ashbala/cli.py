@@ -153,8 +153,7 @@ def get(
         dl.write_manifest(tracks, out_dir, selected.url)
         console.print(f"[green]Manifest written to[/green] {out_dir}/")
     if download:
-        with console.status(f"Downloading {len(tracks)} track(s) to {out_dir}/…"):
-            saved = dl.download_tracks(tracks, out_dir)
+        saved = dl.download_tracks(tracks, out_dir)
         console.print(f"[green]Saved {len(saved)}/{len(tracks)} file(s) to[/green] {out_dir}/")
 
 
